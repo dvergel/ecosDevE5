@@ -5,8 +5,13 @@
 package com.ecos.ecosdeve5.exceptions;
 
 /**
- *
+ * ExceptionApp
+ * 
+ * excepcion personalizada para administrar los mensajes de los error de la aplicacion
+ * 
  * @author Dev
+ * @version 1.0
+ * @since 1.0
  */
 public class ExceptionApp extends Exception {
     /**

@@ -18,11 +18,26 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
- * Hello world!
- *
+ * App
+ * 
+ * modela el controlador de peticiones de la aplicacion web
+ * 
+ * @author Dev
+ * @version 1.0
+ * @since 1.0
  */
 public class App extends HttpServlet {
 
+    /**
+     * doGet
+     * 
+     * controla las peticiones realizadas por el metodo get
+     * 
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -44,6 +59,16 @@ public class App extends HttpServlet {
         }
     }
 
+    /**
+     * doPost
+     * 
+     * controla las peticiones por el metodo Post
+     * 
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
@@ -54,6 +79,14 @@ public class App extends HttpServlet {
         }
     }
 
+    /**
+     * main
+     * 
+     * configura el controlador embebido del servidor de aplicacion jetty
+     * 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
         //Server server = new Server(80);
